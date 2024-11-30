@@ -17,7 +17,7 @@ public class Product {
             this.quantity += quantity;
         }
         else {
-            System.out.print("Saldo informado deve ser maior que 0");
+            System.out.print("\nSaldo informado deve ser maior que 0");
         }
     }
 
@@ -28,5 +28,15 @@ public class Product {
         else {
             System.out.print("Saldo insuficiente em estoque para remover");
         }
+    }
+    public String toString(){
+        return name
+                + ", $"
+                + String.format("%.2f", price)
+                + ", "
+                + quantity
+                + " units"
+                + ", Total: $ "
+                + totalValueInStock();
     }
 }
